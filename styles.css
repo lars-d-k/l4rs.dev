@@ -56,7 +56,11 @@ p {
 }
 
 .page {
-  min-height: 100vh;
+  /* woke dynamic vh for 'mobile' browsers */
+  min-height: 100vh;  /* fallback */
+  min-height: 100svh; /* safer on mobile */
+  min-height: 100dvh; /* modern browsers */
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
