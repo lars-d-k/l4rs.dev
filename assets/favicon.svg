@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <rect width="32" height="32" fill="#1B211A" />
+
+    <!-- ~/ -->
+    <!-- <path
+        d="M4-14L0-14L0-16L2-16L2-18L8-18L8-16L10-16L10-18L14-18L14-16L12-16L12-14L6-14L6-16L4-16L4-14Z"
+        fill="#8BAE66" transform="translate(16, 16) scale(0.9333333333333333) translate(-15, 15)" />
+    <path
+    d="M18-2L16-2L16-6L18-6L18-8L20-8L20-10L22-10L22-12L24-12L24-14L26-14L26-16L28-16L28-18L30-18L30-14L28-14L28-12L26-12L26-10L24-10L24-8L22-8L22-6L20-6L20-4L18-4L18-2Z"
+        fill="#8BAE66" transform="translate(16, 16) scale(0.9333333333333333) translate(-15, 10)" /> -->
+
+    <!-- / -->
+    <path
+        d="M18-2L16-2L16-6L18-6L18-8L20-8L20-10L22-10L22-12L24-12L24-14L26-14L26-16L28-16L28-18L30-18L30-14L28-14L28-12L26-12L26-10L24-10L24-8L22-8L22-6L20-6L20-4L18-4L18-2Z"
+        fill="#8BAE66" transform="translate(16, 16) scale(0.9333333333333333) translate(-23, 10)" />
+</svg>
