@@ -9,22 +9,36 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
+<style>
+.github-link::before {
+  content: '(back to) ';
+}
+</style>
+
 <body>
   <div class="page">
     <div>
-      <h1>l4rs.dev/</h1>
-      <p>Take a look around.</p>
+      <h1>l4rs.dev</h1>
+      <p>Welcome to <a href="me.html">my</a> page, take a look around.</p>
     </div>
 
     <div class="footer">
-      <div class="links">
-        <a href="https://larsdekluijver.nl">larsdekluijver.nl</a>
-        <p class="link-divider"></p>
-        <a href="https://github.com/lars-d-k">(back to) github</a>
+      <div class="links desktop-only">
+        <a href="index.html" class="nav-link"></a>
       </div>
       </br>
+
       <div class="links">
-        <a href="attributions.html">/attributions</a>
+        <a href="https://larsdekluijver.nl">larsdekluijver.nl</a>
+        <p class="link-divider desktop-only"></p>
+        <a href="https://github.com/lars-d-k" class="github-link">github</a>
+      </div>
+      </br>
+      <p class="link-divider mobile-only"></p>
+      <div class="links">
+        <a href="me.html" class="nav-link">me</a>
+        <p class="link-divider desktop-only"></p>
+        <a href="attributions.html" class="nav-link">attributions</a>
       </div>
     </div>
 </body>

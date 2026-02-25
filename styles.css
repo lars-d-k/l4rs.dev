@@ -1,9 +1,9 @@
 :root {
+  /* based on https://colorhunt.co/palette/1b211a6281418bae66ebd5ab */
   --background: #1B211A;
-  /* --background: #1a1f19; */
   --text: #8BAE66;
   --text-muted: #628141;
-  --idrk: #EBD5AB;
+  --accent: #EBD5AB;
 }
 
 @font-face {
@@ -13,14 +13,17 @@
   font-style: normal;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
 /* this avoids creating scrolling bars by placing the padding fit inside the page */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -36,11 +39,11 @@ body {
 }
 
 a {
-  color: var(--text-muted);
   text-decoration: none;
+  color: var(--accent);
 
   &:hover {
-    color: var(--text);
+    opacity: 0.75;
   }
 }
 
@@ -55,10 +58,6 @@ p {
   margin: 0.25rem 0 0;
 }
 
-section {
-  text-align: left;
-}
-
 .page {
   /* woke dynamic vh for 'mobile' browsers */
   min-height: 100vh;  /* fallback */
@@ -69,11 +68,6 @@ section {
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
-
-  text-align: center;
-  @media (min-width: 768px) {
-    text-align: left;
-  }
 }
 
 .footer {
@@ -81,10 +75,12 @@ section {
   flex-direction: column;
   justify-content: space-between;
   gap: .25rem;
+  text-align: center;
 
   @media (min-width: 768px) {
     flex-direction: row;
     gap: 1rem;
+    text-align: left;
   }
 }
 
@@ -105,15 +101,29 @@ section {
   }
 }
 
+.nav-link {
+  &::before {
+    content: "/";
+  }
+}
+
 .link-divider {
   margin: 0px;
-  display: none;
-
-  @media (min-width: 768px) {
-    display: block;
-  }
+  color: var(--text-muted);
 
   &::before {
-    content: "−";
+    content: "-";
+  }
+}
+
+.mobile-only {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.desktop-only {
+  @media (max-width: 767px) {
+    display: none;
   }
 }
