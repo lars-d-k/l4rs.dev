@@ -9,8 +9,8 @@
 @font-face {
   font-family: 'BigBlueTermPlus NerdFont Regular';
   src: url('assets/BigBlueTermPlusNerdFont-Regular.ttf') format('truetype');
-  /* font-weight: normal; */
-  /* font-style: normal; */
+  font-weight: normal;
+  font-style: normal;
 }
 
 html, body {
@@ -55,6 +55,10 @@ p {
   margin: 0.25rem 0 0;
 }
 
+section {
+  text-align: left;
+}
+
 .page {
   /* woke dynamic vh for 'mobile' browsers */
   min-height: 100vh;  /* fallback */
@@ -65,16 +69,51 @@ p {
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
+
+  text-align: center;
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .25rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
 
 .links {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
+  flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  gap: .25rem;
+
+  @media (min-width: 768px) {
+    gap: 1rem;
+    flex-direction: row;
+  }
 
   & a {
     text-wrap: noWrap;
+  }
+}
+
+.link-divider {
+  margin: 0px;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+
+  &::before {
+    content: "−";
   }
 }
