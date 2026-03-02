@@ -10,6 +10,9 @@
 </head>
 
 <style>
+.nl-dne::after {
+  content: '.nl';
+}
 .github-link::before {
   content: '(back to) ';
 }
@@ -18,7 +21,7 @@
 <body>
   <div class="page">
     <div>
-      <h1>l4rs.dev</h1>
+      <h1>l4rs.dev/</h1>
       <p>Welcome to <a href="/me">my</a> page, take a look around.</p>
     </div>
 
@@ -30,7 +33,7 @@
       </br>
 
       <div class="links">
-        <a href="https://larsdekluijver.nl">larsdekluijver.nl</a>
+        <a href="https://larsdekluijver.nl" class="nl-dne">larsdekluijver</a>
         <p class="link-divider desktop-only"></p>
         <a href="https://github.com/lars-d-k" class="github-link">github</a>
       </div>
@@ -39,9 +42,8 @@
       <p class="link-divider mobile-only"></p>
 
       <div class="links">
-        <a href="/me" class="nav-link">me</a>
-        <p class="link-divider desktop-only"></p>
-        <a href="/attributions" class="nav-link">attributions</a>
+        <a href="/me" class="nav-link-short">me</a>
+        <a href="/attributions" class="nav-link-short">attributions</a>
       </div>
     </div>
 </body>

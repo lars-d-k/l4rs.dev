@@ -102,9 +102,15 @@ p {
   }
 }
 
+.nav-link-short {
+  &::before {
+    content: "~/";
+  }
+}
+
 .nav-link {
   &::before {
-    content: "/";
+    content: "cd ~/";
   }
 }
 
