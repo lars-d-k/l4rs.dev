@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Technologies - MCQ Practice</title>
+  <style>
+    :root {
+      --text: #333;
+      --muted: #5c5c5c;
+      --bg: #ffffff;
+      --panel: #f7f7f7;
+      --border: #d6d6d6;
+      --ok: #1f7a1f;
+      --bad: #b42318;
+      --accent: #0b7fc7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    h1, h2 {
+      color: #000;
+      margin: 0 0 12px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(4px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+      margin-bottom: 18px;
+    }
+
+    .topbar-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: #111;
+      border-radius: 6px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    button:hover {
+      border-color: #b0b0b0;
+    }
+
+    .primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    .q-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .q-topic {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .options {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .opt {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+
+    .opt input {
+      margin-top: 3px;
+    }
+
+    code {
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-size: 0.9em;
+      background: #f0f0f0;
+      border-radius: 4px;
+      padding: 0.1em 0.35em;
+    }
+
+    pre {
+      margin: 0 0 10px;
+      padding: 10px;
+      border-radius: 6px;
+      background: #f0f0f0;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-size: 0.9rem;
+    }
+
+    .result {
+      min-height: 1.3em;
+      font-weight: 600;
+    }
+
+    .result.ok {
+      color: var(--ok);
+    }
+
+    .result.bad {
+      color: var(--bad);
+    }
+
+    .explain {
+      color: #222;
+      margin-top: 4px;
+      font-size: 0.95rem;
+    }
+
+    .summary {
+      margin-top: 16px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      font-weight: 600;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 16px;
+      }
+
+      .topbar-inner {
+        padding: 0 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <button id="verifyAll" class="primary">Verify All</button>
+      <button id="resetAll">Reset</button>
+      <span id="quickScore" aria-live="polite"></span>
+    </div>
+  </div>
+
+  <main class="page">
+    <h1>Data Technologies MCQ Practice</h1>
+    <p>Exam-style practice: 4 options per question. Pick one option, then verify.</p>
+
+    <section id="quiz"></section>
+    <div class="summary" id="summary" aria-live="polite">Score: not checked yet.</div>
+  </main>
+
+  <script>
+    const questions = [
+      {
+        topic: "W1 - Joins",
+        prompt: "Which join returns all rows from the left table plus matching rows from the right table?",
+        options: ["INNER JOIN", "LEFT OUTER JOIN", "FULL OUTER JOIN", "CROSS JOIN"],
+        answer: 1,
+        explanation: "LEFT OUTER JOIN keeps every row from the left side and fills unmatched right-side columns with NULL."
+      },
+      {
+        topic: "W1 - DML Safety",
+        prompt: "What is typically wrong with this snippet?",
+        code: "UPDATE students SET email = 'x@mail.com';",
+        options: ["Nothing", "Missing WHERE clause", "Wrong keyword order", "Should use SELECT instead"],
+        answer: 1,
+        explanation: "Without WHERE, every row is updated."
+      },
+      {
+        topic: "W2 - CTE",
+        prompt: "What does a CTE primarily improve?",
+        options: ["Disk compression", "Query readability and stepwise logic", "Automatic indexing", "Transaction isolation"],
+        answer: 1,
+        explanation: "WITH clauses break complex queries into named intermediate steps."
+      },
+      {
+        topic: "W2 - Window Functions",
+        prompt: "Why use window functions instead of GROUP BY for ranking?",
+        options: ["They remove duplicate rows", "They keep row-level detail while computing analytics", "They are only for JSON", "They always run faster"],
+        answer: 1,
+        explanation: "Window functions compute over partitions but do not collapse rows."
+      },
+      {
+        topic: "W2 - Transactions",
+        prompt: "Which sequence gives atomic transfer behavior?",
+        options: ["SELECT; UPDATE;", "BEGIN; UPDATE; UPDATE; COMMIT;", "UPDATE; COMMIT; BEGIN;", "ROLLBACK; UPDATE;"],
+        answer: 1,
+        explanation: "Wrap related updates in one transaction so they succeed or fail together."
+      },
+      {
+        topic: "W2 - Full-text",
+        prompt: "For large text search in PostgreSQL, the preferred approach is:",
+        options: ["LIKE '%term%' only", "to_tsvector + to_tsquery", "ORDER BY RANDOM()", "GROUP BY body"],
+        answer: 1,
+        explanation: "Full-text search supports tokenization and ranking, unlike plain LIKE."
+      },
+      {
+        topic: "W3 - ERD",
+        prompt: "In an M:N relationship (students-courses), what is the normal relational implementation?",
+        options: ["Store comma-separated IDs", "Use one giant table only", "Add a junction table", "Use only a view"],
+        answer: 2,
+        explanation: "A junction table (e.g., enrollment) models many-to-many relationships correctly."
+      },
+      {
+        topic: "W3 - Constraints",
+        prompt: "Which constraint directly prevents duplicate emails in a student table?",
+        options: ["CHECK", "NOT NULL", "UNIQUE", "FOREIGN KEY"],
+        answer: 2,
+        explanation: "UNIQUE enforces no duplicate values in that column."
+      },
+      {
+        topic: "W3 - Security",
+        prompt: "Best least-privilege approach:",
+        options: ["Give all users SUPERUSER", "Grant only required privileges via roles", "Avoid roles and use one shared login", "Disable REVOKE"],
+        answer: 1,
+        explanation: "Role-based grants with minimal permissions is the standard model."
+      },
+      {
+        topic: "W4 - 1NF",
+        prompt: "What violates 1NF?",
+        options: ["Primary key on id", "Atomic values in each column", "A column storing 'DB,AI,Networks'", "A foreign key"],
+        answer: 2,
+        explanation: "1NF requires atomic values, not repeating groups in one field."
+      },
+      {
+        topic: "W4 - 3NF",
+        prompt: "3NF mainly removes which problem?",
+        options: ["Transitive dependencies on non-key attributes", "Need for primary keys", "All NULL values", "All joins"],
+        answer: 0,
+        explanation: "In 3NF, non-key attributes should depend only on the key, not on other non-keys."
+      },
+      {
+        topic: "W4 - Scope",
+        prompt: "Given your test scope, which is in scope?",
+        options: ["Only 4NF-6NF", "Up to BCNF", "Only 0NF", "Only 5NF"],
+        answer: 1,
+        explanation: "You explicitly wanted normalization up to BCNF for test prep."
+      },
+      {
+        topic: "W5 - Indexing",
+        prompt: "Best first candidates for indexes are columns used in:",
+        options: ["WHERE/JOIN/ORDER BY", "Every SELECT *", "INSERT values", "Comments"],
+        answer: 0,
+        explanation: "Indexes help filtering, joins, and sorting; they also have write cost."
+      },
+      {
+        topic: "W5 - Materialized View",
+        prompt: "Main tradeoff of materialized views:",
+        options: ["Always live data, slow reads", "Fast reads, but needs refresh to stay current", "No storage used", "Only works with JSON"],
+        answer: 1,
+        explanation: "Data is persisted and may become stale until refreshed."
+      },
+      {
+        topic: "W5 - Optimization",
+        prompt: "Which command is used to inspect actual execution cost/timing in PostgreSQL?",
+        options: ["SHOW PLAN", "TRACE QUERY", "EXPLAIN ANALYZE", "PROFILE SQL"],
+        answer: 2,
+        explanation: "EXPLAIN ANALYZE executes and reports plan details and timings."
+      },
+      {
+        topic: "W6 - Redis Sets",
+        prompt: "Which property is true for Redis sets?",
+        options: ["They preserve duplicates", "They are ordered by insertion time", "They store unique unordered elements", "They only store integers"],
+        answer: 2,
+        explanation: "Sets are unique and unordered."
+      },
+      {
+        topic: "W6 - Numeric Ops",
+        prompt: "INCR in Redis is useful for:",
+        options: ["Graph traversal", "Atomic counters", "SQL joins", "Schema validation"],
+        answer: 1,
+        explanation: "INCR/DECR provide atomic increment/decrement operations."
+      },
+      {
+        topic: "W6 - Messaging",
+        prompt: "If message persistence/replay is needed, plain Pub/Sub is usually:",
+        options: ["Preferred", "Insufficient on its own", "Mandatory", "Equivalent to SQL triggers"],
+        answer: 1,
+        explanation: "Pub/Sub is real-time and transient; streams/queues are used for persistence."
+      },
+      {
+        topic: "W7 - Schema Design",
+        prompt: "When should you embed data in a document DB?",
+        options: ["When data is always accessed together", "When data is globally shared and very large", "Never", "Only for numeric fields"],
+        answer: 0,
+        explanation: "Embedding is best for tightly coupled read-together data."
+      },
+      {
+        topic: "W7 - Aggregation",
+        prompt: "Which is a valid MongoDB aggregation stage?",
+        options: ["$join", "$group", "$combine", "$windowby"],
+        answer: 1,
+        explanation: "$group is a core pipeline stage."
+      },
+      {
+        topic: "W8 - Cypher",
+        prompt: "In Cypher, MATCH primarily does what?",
+        options: ["Deletes nodes", "Finds graph patterns", "Creates indexes", "Commits transactions"],
+        answer: 1,
+        explanation: "MATCH is pattern matching over nodes and relationships."
+      },
+      {
+        topic: "W8 - MERGE",
+        prompt: "Which statement is most accurate?",
+        options: ["CREATE and MERGE are identical", "MERGE find-or-creates a pattern", "MERGE only deletes", "CREATE is idempotent"],
+        answer: 1,
+        explanation: "MERGE behaves like an upsert for graph patterns."
+      },
+      {
+        topic: "W9 - RLS",
+        prompt: "Row-Level Security is used to:",
+        options: ["Encrypt disk pages", "Limit visible rows based on policy", "Speed up joins", "Replace primary keys"],
+        answer: 1,
+        explanation: "RLS applies per-row access rules for users/roles/tenants."
+      },
+      {
+        topic: "W9 - Privacy",
+        prompt: "Which action best aligns with privacy-by-design?",
+        options: ["Store all PII forever", "Collect minimal required data and mask where possible", "Disable auditing", "Use one shared admin account"],
+        answer: 1,
+        explanation: "Data minimization and masking are core privacy practices."
+      }
+    ];
+
+    function renderQuiz() {
+      const quiz = document.getElementById("quiz");
+      quiz.innerHTML = "";
+
+      questions.forEach((q, i) => {
+        const card = document.createElement("article");
+        card.className = "card";
+        card.dataset.index = i;
+
+        const optionsHtml = q.options
+          .map((opt, idx) => {
+            const id = `q${i}_o${idx}`;
+            return `
+              <label class="opt" for="${id}">
+                <input type="radio" id="${id}" name="q${i}" value="${idx}" />
+                <span><strong>${String.fromCharCode(97 + idx)}.</strong> ${opt}</span>
+              </label>
+            `;
+          })
+          .join("");
+
+        card.innerHTML = `
+          <div class="q-head">
+            <strong>Q${i + 1}. ${q.prompt}</strong>
+            <span class="q-topic">${q.topic}</span>
+          </div>
+          ${q.code ? `<pre>${escapeHtml(q.code)}</pre>` : ""}
+          <div class="options">${optionsHtml}</div>
+          <button type="button" data-action="verify">Verify</button>
+          <div class="result" aria-live="polite"></div>
+          <div class="explain"></div>
+        `;
+
+        quiz.appendChild(card);
+      });
+    }
+
+    function escapeHtml(text) {
+      return text
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function verifyOne(card) {
+      const idx = Number(card.dataset.index);
+      const q = questions[idx];
+      const selected = card.querySelector("input[type='radio']:checked");
+      const result = card.querySelector(".result");
+      const explain = card.querySelector(".explain");
+
+      if (!selected) {
+        result.className = "result bad";
+        result.textContent = "Pick one option first.";
+        explain.textContent = "";
+        return false;
+      }
+
+      const selectedIdx = Number(selected.value);
+      const ok = selectedIdx === q.answer;
+      card.dataset.verified = "1";
+      card.dataset.correct = ok ? "1" : "0";
+
+      if (ok) {
+        result.className = "result ok";
+        result.textContent = "Correct.";
+      } else {
+        result.className = "result bad";
+        result.textContent = `Incorrect. Correct answer: ${String.fromCharCode(97 + q.answer)}.`;
+      }
+
+      explain.textContent = q.explanation;
+      return ok;
+    }
+
+    function verifyAll() {
+      const cards = [...document.querySelectorAll(".card")];
+      let correct = 0;
+      let answered = 0;
+
+      cards.forEach((card) => {
+        const selected = card.querySelector("input[type='radio']:checked");
+        if (selected) {
+          answered += 1;
+          if (verifyOne(card)) {
+            correct += 1;
+          }
+        }
+      });
+
+      const total = questions.length;
+      const pct = answered ? Math.round((correct / total) * 100) : 0;
+      document.getElementById("summary").textContent =
+        `Score: ${correct}/${total} (${pct}%). Answered: ${answered}/${total}.`;
+      document.getElementById("quickScore").textContent = `${correct}/${total}`;
+    }
+
+    function resetAll() {
+      document.querySelectorAll("input[type='radio']").forEach((el) => {
+        el.checked = false;
+      });
+      document.querySelectorAll(".result").forEach((el) => {
+        el.className = "result";
+        el.textContent = "";
+      });
+      document.querySelectorAll(".explain").forEach((el) => {
+        el.textContent = "";
+      });
+      document.querySelectorAll(".card").forEach((card) => {
+        card.dataset.verified = "0";
+        card.dataset.correct = "0";
+      });
+      document.getElementById("summary").textContent = "Score: not checked yet.";
+      document.getElementById("quickScore").textContent = "";
+    }
+
+    renderQuiz();
+
+    document.getElementById("quiz").addEventListener("click", (event) => {
+      const btn = event.target.closest("button[data-action='verify']");
+      if (!btn) {
+        return;
+      }
+      const card = btn.closest(".card");
+      verifyOne(card);
+    });
+
+    document.getElementById("verifyAll").addEventListener("click", verifyAll);
+    document.getElementById("resetAll").addEventListener("click", resetAll);
+  </script>
+</body>
+</html>

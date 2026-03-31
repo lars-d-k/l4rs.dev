@@ -1,0 +1,387 @@
+<!DOCTYPE html><html><head>
+      <title>test-prep-summary</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////wsl.localhost/Ubuntu/home/lars/.vscode-server/extensions/shd101wyy.markdown-preview-enhanced-0.8.22/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="data-technologies---test-prep-summary">Data Technologies - Test Prep Summary </h1>
+<p>Only core topics are included. Keep this as a fast recall sheet.</p>
+<h2 id="basic-sql-w1">Basic SQL (W1) </h2>
+<h3 id="relational-databases">Relational databases </h3>
+<ul>
+<li>Tables + PK/FK + constraints enforce consistency; transactions follow ACID.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-ALTER">ALTER</span> <span class="token keyword keyword-TABLE">TABLE</span> enrollments
+<span class="token keyword keyword-ADD">ADD</span> <span class="token keyword keyword-CONSTRAINT">CONSTRAINT</span> fk_course <span class="token keyword keyword-FOREIGN">FOREIGN</span> <span class="token keyword keyword-KEY">KEY</span> <span class="token punctuation">(</span>course_id<span class="token punctuation">)</span> <span class="token keyword keyword-REFERENCES">REFERENCES</span> courses<span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="select">Select </h3>
+<ul>
+<li>Core query flow: <code>SELECT -&gt; FROM -&gt; WHERE -&gt; GROUP BY -&gt; HAVING -&gt; ORDER BY</code>.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> department<span class="token punctuation">,</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-FROM">FROM</span> courses
+<span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> department
+<span class="token keyword keyword-HAVING">HAVING</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">5</span><span class="token punctuation">;</span>
+</code></pre><h3 id="joins">Joins </h3>
+<ul>
+<li><code>INNER</code> = matches only, <code>LEFT</code> = all left + matches, <code>FULL</code> = all rows from both.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> s<span class="token punctuation">.</span>name<span class="token punctuation">,</span> c<span class="token punctuation">.</span>name
+<span class="token keyword keyword-FROM">FROM</span> students s
+<span class="token keyword keyword-JOIN">JOIN</span> enrollments e <span class="token keyword keyword-ON">ON</span> e<span class="token punctuation">.</span>student_id <span class="token operator">=</span> s<span class="token punctuation">.</span>id
+<span class="token keyword keyword-JOIN">JOIN</span> courses c <span class="token keyword keyword-ON">ON</span> c<span class="token punctuation">.</span>id <span class="token operator">=</span> e<span class="token punctuation">.</span>course_id<span class="token punctuation">;</span>
+</code></pre><h3 id="data-insertupdatedelete">Data (insert/update/delete) </h3>
+<ul>
+<li>Write operations are easy to break with missing <code>WHERE</code>; be explicit.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-UPDATE">UPDATE</span> students <span class="token keyword keyword-SET">SET</span> email <span class="token operator">=</span> <span class="token string">'new@mail.com'</span> <span class="token keyword keyword-WHERE">WHERE</span> id <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+</code></pre><h3 id="advancing">Advancing </h3>
+<ul>
+<li>Use <code>CASE</code>, subqueries, <code>UNION</code>, <code>COALESCE</code> for compact reporting queries.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> name<span class="token punctuation">,</span> <span class="token keyword keyword-CASE">CASE</span> <span class="token keyword keyword-WHEN">WHEN</span> grade <span class="token operator">&gt;=</span> <span class="token number">10</span> <span class="token keyword keyword-THEN">THEN</span> <span class="token string">'pass'</span> <span class="token keyword keyword-ELSE">ELSE</span> <span class="token string">'fail'</span> <span class="token keyword keyword-END">END</span> <span class="token keyword keyword-AS">AS</span> result
+<span class="token keyword keyword-FROM">FROM</span> exams<span class="token punctuation">;</span>
+</code></pre><h2 id="advanced-sql-w2">Advanced SQL (W2) </h2>
+<h3 id="introduction">Introduction </h3>
+<ul>
+<li>Goal: write readable, composable SQL for analytics and complex business logic.</li>
+</ul>
+<h3 id="views">Views </h3>
+<ul>
+<li>View = saved query (virtual table), useful for reuse and access control.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-VIEW">VIEW</span> active_students <span class="token keyword keyword-AS">AS</span>
+<span class="token keyword keyword-SELECT">SELECT</span> id<span class="token punctuation">,</span> name <span class="token keyword keyword-FROM">FROM</span> students <span class="token keyword keyword-WHERE">WHERE</span> active <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+</code></pre><h3 id="cte">CTE </h3>
+<ul>
+<li><code>WITH</code> makes multi-step queries clearer; recursive CTE handles hierarchies.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-WITH">WITH</span> recent <span class="token keyword keyword-AS">AS</span> <span class="token punctuation">(</span>
+  <span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> enrollments <span class="token keyword keyword-WHERE">WHERE</span> enrolled_at <span class="token operator">&gt;=</span> <span class="token keyword keyword-CURRENT_DATE">CURRENT_DATE</span> <span class="token operator">-</span> <span class="token keyword keyword-INTERVAL">INTERVAL</span> <span class="token string">'30 days'</span>
+<span class="token punctuation">)</span>
+<span class="token keyword keyword-SELECT">SELECT</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword keyword-FROM">FROM</span> recent<span class="token punctuation">;</span>
+</code></pre><h3 id="window-functions">Window functions </h3>
+<ul>
+<li>Compute rank/running totals without collapsing rows.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> name<span class="token punctuation">,</span> salary<span class="token punctuation">,</span>
+       RANK<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword keyword-OVER">OVER</span> <span class="token punctuation">(</span><span class="token keyword keyword-ORDER">ORDER</span> <span class="token keyword keyword-BY">BY</span> salary <span class="token keyword keyword-DESC">DESC</span><span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> salary_rank
+<span class="token keyword keyword-FROM">FROM</span> employees<span class="token punctuation">;</span>
+</code></pre><h3 id="transactions">Transactions </h3>
+<ul>
+<li>Use <code>BEGIN/COMMIT/ROLLBACK</code> for atomic multi-step changes.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-BEGIN">BEGIN</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-UPDATE">UPDATE</span> accounts <span class="token keyword keyword-SET">SET</span> balance <span class="token operator">=</span> balance <span class="token operator">-</span> <span class="token number">100</span> <span class="token keyword keyword-WHERE">WHERE</span> id <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-UPDATE">UPDATE</span> accounts <span class="token keyword keyword-SET">SET</span> balance <span class="token operator">=</span> balance <span class="token operator">+</span> <span class="token number">100</span> <span class="token keyword keyword-WHERE">WHERE</span> id <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-COMMIT">COMMIT</span><span class="token punctuation">;</span>
+</code></pre><h3 id="json">JSON </h3>
+<ul>
+<li>PostgreSQL JSON/JSONB lets you query semi-structured fields directly.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> details<span class="token operator">-</span><span class="token operator">&gt;&gt;</span><span class="token string">'level'</span> <span class="token keyword keyword-AS">AS</span> <span class="token keyword keyword-level">level</span>
+<span class="token keyword keyword-FROM">FROM</span> courses
+<span class="token keyword keyword-WHERE">WHERE</span> details<span class="token operator">-</span><span class="token operator">&gt;&gt;</span><span class="token string">'track'</span> <span class="token operator">=</span> <span class="token string">'data'</span><span class="token punctuation">;</span>
+</code></pre><h3 id="full-text">Full-text </h3>
+<ul>
+<li><code>to_tsvector</code> + <code>to_tsquery</code> beats <code>LIKE</code> for word search and ranking.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> title
+<span class="token keyword keyword-FROM">FROM</span> articles
+<span class="token keyword keyword-WHERE">WHERE</span> to_tsvector<span class="token punctuation">(</span><span class="token string">'english'</span><span class="token punctuation">,</span> body<span class="token punctuation">)</span> @@ to_tsquery<span class="token punctuation">(</span><span class="token string">'database &amp; index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h2 id="database-design-w3">Database Design (W3) </h2>
+<h3 id="introduction-1">Introduction </h3>
+<ul>
+<li>Design first, then implement: conceptual -&gt; logical -&gt; physical.</li>
+</ul>
+<h3 id="conceptual-design-erd">Conceptual design (ERD) </h3>
+<ul>
+<li>Model entities, attributes, cardinalities (1:1, 1:N, M:N) before SQL.</li>
+</ul>
+<h3 id="physical-design">Physical design </h3>
+<ul>
+<li>Choose correct types and constraints early to prevent bad data.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-TABLE">TABLE</span> students <span class="token punctuation">(</span>
+  id <span class="token keyword keyword-SERIAL">SERIAL</span> <span class="token keyword keyword-PRIMARY">PRIMARY</span> <span class="token keyword keyword-KEY">KEY</span><span class="token punctuation">,</span>
+  email <span class="token keyword keyword-VARCHAR">VARCHAR</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token keyword keyword-UNIQUE">UNIQUE</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="relations">Relations </h3>
+<ul>
+<li>M:N becomes a junction table with two foreign keys.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-TABLE">TABLE</span> enrollment <span class="token punctuation">(</span>
+  student_id <span class="token keyword keyword-INT">INT</span> <span class="token keyword keyword-REFERENCES">REFERENCES</span> students<span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  course_id  <span class="token keyword keyword-INT">INT</span> <span class="token keyword keyword-REFERENCES">REFERENCES</span> courses<span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token keyword keyword-PRIMARY">PRIMARY</span> <span class="token keyword keyword-KEY">KEY</span> <span class="token punctuation">(</span>student_id<span class="token punctuation">,</span> course_id<span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="altering-tables">Altering tables </h3>
+<ul>
+<li><code>ALTER TABLE</code> evolves schema safely in steps.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-ALTER">ALTER</span> <span class="token keyword keyword-TABLE">TABLE</span> students <span class="token keyword keyword-ADD">ADD</span> <span class="token keyword keyword-COLUMN">COLUMN</span> birth_date <span class="token keyword keyword-DATE">DATE</span><span class="token punctuation">;</span>
+</code></pre><h3 id="procedures-and-triggers">Procedures and triggers </h3>
+<ul>
+<li>Trigger = auto action on insert/update/delete; use sparingly for invariants/audit.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-TRIGGER">TRIGGER</span> set_updated_at
+BEFORE <span class="token keyword keyword-UPDATE">UPDATE</span> <span class="token keyword keyword-ON">ON</span> students
+<span class="token keyword keyword-FOR EACH ROW">FOR EACH ROW</span> <span class="token keyword keyword-EXECUTE">EXECUTE</span> <span class="token keyword keyword-FUNCTION">FUNCTION</span> touch_updated_at<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="deleting-tables">Deleting tables </h3>
+<ul>
+<li><code>DROP TABLE ... CASCADE</code> removes dependencies too; use carefully.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-DROP">DROP</span> <span class="token keyword keyword-TABLE">TABLE</span> <span class="token keyword keyword-IF">IF</span> <span class="token keyword keyword-EXISTS">EXISTS</span> enrollment <span class="token keyword keyword-CASCADE">CASCADE</span><span class="token punctuation">;</span>
+</code></pre><h3 id="security">Security </h3>
+<ul>
+<li>Apply least privilege with roles and grants.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-GRANT">GRANT</span> <span class="token keyword keyword-SELECT">SELECT</span> <span class="token keyword keyword-ON">ON</span> students <span class="token keyword keyword-TO">TO</span> app_reader<span class="token punctuation">;</span>
+<span class="token keyword keyword-REVOKE">REVOKE</span> <span class="token keyword keyword-INSERT">INSERT</span><span class="token punctuation">,</span> <span class="token keyword keyword-UPDATE">UPDATE</span><span class="token punctuation">,</span> <span class="token keyword keyword-DELETE">DELETE</span> <span class="token keyword keyword-ON">ON</span> students <span class="token keyword keyword-FROM">FROM</span> app_reader<span class="token punctuation">;</span>
+</code></pre><h2 id="normalisation-w4">Normalisation (W4) </h2>
+<h3 id="introduction-2">Introduction </h3>
+<ul>
+<li>Normalization reduces redundancy and update bugs.</li>
+</ul>
+<h3 id="anomalies">Anomalies </h3>
+<ul>
+<li>Insert/update/delete anomalies are the reason normalization exists.</li>
+</ul>
+<h3 id="dependencies">Dependencies </h3>
+<ul>
+<li>Functional dependency <code>A -&gt; B</code> means <code>A</code> determines <code>B</code>.</li>
+</ul>
+<h3 id="normal-forms-test-scope">Normal forms (test scope) </h3>
+<h4 id="1nf-0nf---1nf">1NF (0NF -&gt; 1NF) </h4>
+<ul>
+<li>No repeating groups; all attributes atomic.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token comment">-- Bad: student(courses = 'DB,AI')</span>
+<span class="token comment">-- Good: enrollment(student_id, course_id)</span>
+</code></pre><h4 id="2nf">2NF </h4>
+<ul>
+<li>1NF + no partial dependency on part of a composite key.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token comment">-- Bad (partial dependency): PK = (student_id, course_id)</span>
+<span class="token comment">-- instructor_name depends only on course_id</span>
+enrollment<span class="token punctuation">(</span>student_id<span class="token punctuation">,</span> course_id<span class="token punctuation">,</span> instructor_name<span class="token punctuation">)</span>
+
+<span class="token comment">-- Good (2NF): split course-level attributes</span>
+enrollment<span class="token punctuation">(</span>student_id<span class="token punctuation">,</span> course_id<span class="token punctuation">)</span>
+courses<span class="token punctuation">(</span>course_id<span class="token punctuation">,</span> instructor_name<span class="token punctuation">)</span>
+</code></pre><h4 id="3nf">3NF </h4>
+<ul>
+<li>2NF + no transitive dependency between non-key attributes.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token comment">-- Bad (transitive dependency): student_id -&gt; department_id -&gt; department_name</span>
+students<span class="token punctuation">(</span>student_id<span class="token punctuation">,</span> department_id<span class="token punctuation">,</span> department_name<span class="token punctuation">)</span>
+
+<span class="token comment">-- Good (3NF): move department details out</span>
+students<span class="token punctuation">(</span>student_id<span class="token punctuation">,</span> department_id<span class="token punctuation">)</span>
+departments<span class="token punctuation">(</span>department_id<span class="token punctuation">,</span> department_name<span class="token punctuation">)</span>
+</code></pre><h4 id="bcnf">BCNF </h4>
+<ul>
+<li>Stronger 3NF: every determinant must be a candidate key.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token comment">-- Bad (not BCNF): in a course-room-timeslot table,</span>
+<span class="token comment">-- room,timeslot -&gt; course (so room,timeslot is a determinant but not a candidate key)</span>
+schedule<span class="token punctuation">(</span>course<span class="token punctuation">,</span> room<span class="token punctuation">,</span> timeslot<span class="token punctuation">)</span>
+
+<span class="token comment">-- Good (BCNF): decompose by determinants</span>
+course_schedule<span class="token punctuation">(</span>course<span class="token punctuation">,</span> room<span class="token punctuation">,</span> timeslot<span class="token punctuation">)</span>
+room_slot_assignment<span class="token punctuation">(</span>room<span class="token punctuation">,</span> timeslot<span class="token punctuation">,</span> course<span class="token punctuation">)</span>
+</code></pre><h3 id="higher-normal-forms">Higher normal forms </h3>
+<ul>
+<li>For this test, stop at BCNF (4NF-6NF not required).</li>
+</ul>
+<h3 id="performance">Performance </h3>
+<ul>
+<li>More normalization = less redundancy, but often more joins.</li>
+</ul>
+<h2 id="optimalisation-w5">Optimalisation (W5) </h2>
+<h3 id="introduction-3">Introduction </h3>
+<ul>
+<li>Performance work is mostly: better indexes, better plans, less data scanned.</li>
+</ul>
+<h3 id="indexing">Indexing </h3>
+<ul>
+<li>Index columns used in <code>WHERE</code>, <code>JOIN</code>, <code>ORDER BY</code>; avoid over-indexing writes.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-INDEX">INDEX</span> idx_orders_customer_created
+<span class="token keyword keyword-ON">ON</span> orders<span class="token punctuation">(</span>customer_id<span class="token punctuation">,</span> created_at <span class="token keyword keyword-DESC">DESC</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="materialized-views">Materialized Views </h3>
+<ul>
+<li>Precomputed query results; fast reads, requires refresh.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> MATERIALIZED <span class="token keyword keyword-VIEW">VIEW</span> mv_sales <span class="token keyword keyword-AS">AS</span>
+<span class="token keyword keyword-SELECT">SELECT</span> product_id<span class="token punctuation">,</span> <span class="token function">SUM</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> total
+<span class="token keyword keyword-FROM">FROM</span> sales
+<span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> product_id<span class="token punctuation">;</span>
+</code></pre><h3 id="partitioning">Partitioning </h3>
+<ul>
+<li>Split very large tables by date/list/hash for pruning.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-TABLE">TABLE</span> logs <span class="token punctuation">(</span>
+  id BIGSERIAL<span class="token punctuation">,</span>
+  created_at <span class="token keyword keyword-DATE">DATE</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+<span class="token punctuation">)</span> <span class="token keyword keyword-PARTITION">PARTITION</span> <span class="token keyword keyword-BY">BY</span> RANGE <span class="token punctuation">(</span>created_at<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="query-optimization">Query optimization </h3>
+<ul>
+<li>Read execution plans and rewrite expensive joins/filters first.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-EXPLAIN">EXPLAIN</span> <span class="token keyword keyword-ANALYZE">ANALYZE</span>
+<span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> orders <span class="token keyword keyword-WHERE">WHERE</span> customer_id <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+</code></pre><h3 id="caching">Caching </h3>
+<ul>
+<li>Cache hot reads (Redis/app cache), keep TTL/invalidation strategy explicit.</li>
+</ul>
+<h2 id="key-value-databases-w6">Key Value Databases (W6) </h2>
+<h3 id="introduction-4">Introduction </h3>
+<ul>
+<li>Key-value stores optimize ultra-fast lookup by key.</li>
+</ul>
+<h3 id="types-of-nosql-databases">Types of NoSQL databases </h3>
+<ul>
+<li>Know differences: key-value, document, graph (different query strengths).</li>
+</ul>
+<h3 id="working-with-key-value-databases">Working with key-value databases </h3>
+<ul>
+<li>Redis basics: strings, hashes, lists.</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>SET user:1 <span class="token string">"Alice"</span>
+HSET product:42 name <span class="token string">"Laptop"</span> price <span class="token number">899</span>
+</code></pre><h3 id="working-with-sets">Working with sets </h3>
+<ul>
+<li>Sets are unique unordered values; useful for tags/membership.</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>SADD course:db students:1 students:2
+SINTER course:db course:sql
+</code></pre><h3 id="working-with-numeric-values">Working with numeric values </h3>
+<ul>
+<li>Atomic counters with <code>INCR/DECR</code>.</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>INCR page:home:views
+</code></pre><h3 id="in-memory-databases">In-memory databases </h3>
+<ul>
+<li>Very fast, but persistence config (RDB/AOF) matters for durability.</li>
+</ul>
+<h3 id="redis-as-message-bus">Redis as message bus </h3>
+<ul>
+<li>Pub/Sub for live events; Streams/queues when persistence is needed.</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>PUBLISH alerts <span class="token string">"exam-started"</span>
+</code></pre><h2 id="document-databases-w7">Document Databases (W7) </h2>
+<h3 id="introduction-5">Introduction </h3>
+<ul>
+<li>Document model (JSON-like) supports flexible schema and nested data.</li>
+</ul>
+<h3 id="working-with-documents">Working with documents </h3>
+<ul>
+<li>CRUD + projections + operators are MongoDB essentials.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code>db<span class="token punctuation">.</span><span class="token property-access">products</span><span class="token punctuation">.</span><span class="token method function property-access">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">$gt</span><span class="token operator">:</span> <span class="token number">500</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">_id</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre><h3 id="schema-less-in-mongodb">Schema-less in MongoDB </h3>
+<ul>
+<li>Schema-less is flexible, not schema-free; validate critical fields.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code>db<span class="token punctuation">.</span><span class="token method function property-access">createCollection</span><span class="token punctuation">(</span><span class="token string">'orders'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">validator</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">$jsonSchema</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'customerId'</span><span class="token punctuation">,</span> <span class="token string">'total'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre><h3 id="schema-design-principles">Schema design principles </h3>
+<ul>
+<li>Embed for read-together data, reference for shared/high-growth data.</li>
+</ul>
+<h3 id="indexes">Indexes </h3>
+<ul>
+<li>Use single/compound indexes based on real query patterns.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code>db<span class="token punctuation">.</span><span class="token property-access">orders</span><span class="token punctuation">.</span><span class="token method function property-access">createIndex</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">customerId</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">createdAt</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre><h3 id="aggregation">Aggregation </h3>
+<ul>
+<li>Pipeline stages: <code>$match</code>, <code>$group</code>, <code>$project</code>, <code>$sort</code>.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code>db<span class="token punctuation">.</span><span class="token property-access">orders</span><span class="token punctuation">.</span><span class="token method function property-access">aggregate</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">$group</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">_id</span><span class="token operator">:</span> <span class="token string">'$customerId'</span><span class="token punctuation">,</span> <span class="token literal-property property">total</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">$sum</span><span class="token operator">:</span> <span class="token string">'$total'</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">$sort</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">total</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre><h2 id="graph-databases-w8">Graph Databases (W8) </h2>
+<h3 id="introduction-6">Introduction </h3>
+<ul>
+<li>Graph DBs model relationships as first-class citizens (nodes + edges).</li>
+</ul>
+<h3 id="working-with-graph-queries">Working with graph queries </h3>
+<ul>
+<li>Cypher <code>MATCH</code> pattern queries are key exam skill.</li>
+</ul>
+<pre data-role="codeBlock" data-info="cypher" class="language-cypher cypher"><code><span class="token keyword keyword-MATCH">MATCH</span> <span class="token punctuation">(</span>s<span class="token operator">:</span><span class="token class-name">Student</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token punctuation">[</span><span class="token operator">:</span><span class="token relationship property">ENROLLED_IN</span><span class="token punctuation">]</span><span class="token operator">-&gt;</span><span class="token punctuation">(</span>c<span class="token operator">:</span><span class="token class-name">Course</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-RETURN">RETURN</span> s<span class="token punctuation">.</span>name<span class="token punctuation">,</span> c<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+</code></pre><h3 id="properties-on-relationships">Properties on relationships </h3>
+<ul>
+<li>Store context on edges (e.g., rating, since, weight).</li>
+</ul>
+<pre data-role="codeBlock" data-info="cypher" class="language-cypher cypher"><code><span class="token keyword keyword-MATCH">MATCH</span> <span class="token punctuation">(</span><span class="token operator">:</span><span class="token class-name">User</span> <span class="token punctuation">{</span>id<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token punctuation">[</span>r<span class="token operator">:</span><span class="token relationship property">RATED</span><span class="token punctuation">]</span><span class="token operator">-&gt;</span><span class="token punctuation">(</span>m<span class="token operator">:</span><span class="token class-name">Movie</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-RETURN">RETURN</span> m<span class="token punctuation">.</span>title<span class="token punctuation">,</span> r<span class="token punctuation">.</span>score<span class="token punctuation">;</span>
+</code></pre><h3 id="modify-relationships">Modify relationships </h3>
+<ul>
+<li><code>CREATE</code> always inserts; <code>MERGE</code> is idempotent upsert-like behavior.</li>
+</ul>
+<pre data-role="codeBlock" data-info="cypher" class="language-cypher cypher"><code><span class="token keyword keyword-MERGE">MERGE</span> <span class="token punctuation">(</span>a<span class="token operator">:</span><span class="token class-name">User</span> <span class="token punctuation">{</span>id<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token punctuation">[</span>r<span class="token operator">:</span><span class="token relationship property">FOLLOWS</span><span class="token punctuation">]</span><span class="token operator">-&gt;</span><span class="token punctuation">(</span>b<span class="token operator">:</span><span class="token class-name">User</span> <span class="token punctuation">{</span>id<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-ON">ON</span> <span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-SET">SET</span> r<span class="token punctuation">.</span>since <span class="token operator">=</span> <span class="token function">date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h2 id="databases-security-and-privacy-w9">Databases Security and Privacy (W9) </h2>
+<h3 id="introduction-7">Introduction </h3>
+<ul>
+<li>Security = layered controls: auth, authorization, encryption, auditing.</li>
+</ul>
+<h3 id="access-control">Access Control </h3>
+<ul>
+<li>RBAC: grant by role, not by user; always least privilege.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> ROLE analyst<span class="token punctuation">;</span>
+<span class="token keyword keyword-GRANT">GRANT</span> <span class="token keyword keyword-SELECT">SELECT</span> <span class="token keyword keyword-ON">ON</span> <span class="token keyword keyword-ALL">ALL</span> <span class="token keyword keyword-TABLES">TABLES</span> <span class="token operator">IN</span> <span class="token keyword keyword-SCHEMA">SCHEMA</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-TO">TO</span> analyst<span class="token punctuation">;</span>
+</code></pre><h3 id="row-level-security">Row Level Security </h3>
+<ul>
+<li>RLS filters rows per user/tenant at DB level.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-ALTER">ALTER</span> <span class="token keyword keyword-TABLE">TABLE</span> orders <span class="token keyword keyword-ENABLE">ENABLE</span> <span class="token keyword keyword-ROW">ROW</span> <span class="token keyword keyword-LEVEL">LEVEL</span> SECURITY<span class="token punctuation">;</span>
+<span class="token keyword keyword-CREATE">CREATE</span> POLICY tenant_isolation <span class="token keyword keyword-ON">ON</span> orders
+<span class="token keyword keyword-USING">USING</span> <span class="token punctuation">(</span>tenant_id <span class="token operator">=</span> current_setting<span class="token punctuation">(</span><span class="token string">'app.tenant_id'</span><span class="token punctuation">)</span>::<span class="token keyword keyword-int">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="privacy-and-anonymization">Privacy and anonymization </h3>
+<ul>
+<li>Apply minimization + masking/pseudonymization for PII and compliance.</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token keyword keyword-LEFT">LEFT</span><span class="token punctuation">(</span>email<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token string">'***@***'</span> <span class="token keyword keyword-AS">AS</span> masked_email <span class="token keyword keyword-FROM">FROM</span> users<span class="token punctuation">;</span>
+</code></pre><h3 id="resources">Resources </h3>
+<ul>
+<li>Skip for test prep unless instructor highlighted specific external docs.</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
